@@ -1,0 +1,150 @@
+html {
+    padding: 20px;
+}
+
+header > nav {
+    display: grid;
+    grid-template-columns: repeat(1fr, 12);
+}
+
+header > nav > ul {
+    grid-column: 12;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+header > nav > ul > li > a {
+    text-decoration: none;
+    color: #202124;
+}
+
+header > nav > ul > li > a > #profile-pic {
+    width: 40px;
+    border-radius: 100%;
+}
+
+header > nav > ul > li > a > #menu-icon {
+    width: 25px;
+}
+
+main {
+    text-align: center;
+    margin-top: 10vh;
+}
+
+main > div#main-input-container > span {
+    align-items: baseline;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-style: solid;
+    border-color: #bcbec7;
+    border-width: 1px;
+    border-radius: 50px;
+}
+
+main > div#main-input-container > span > img {
+    padding: 1px;
+    height: 25px;
+    width: auto;
+}
+
+main > div > span > input,
+main > div > span > input:focus,
+main > div > span > textarea:focus {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 500px;
+    border-style: none;
+    outline: none;
+}
+
+@media (max-width: 700px) {
+    header > nav {
+        grid-template-columns: repeat(1fr, 8);
+    }
+    
+    header > nav > ul {
+        grid-column: 8;
+    }
+
+    main > div#logo > img {
+        width: 450px;
+    }
+
+    main > div#main-input-container > span {
+        padding-top: 7px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    main > div#main-input-container > span > img {
+        padding: 1px;
+        height: 22px;
+        width: auto;
+    }
+
+    main > div > span > input,
+    main > div > span > input:focus,
+    main > div > span > textarea:focus {
+        width: 300px;
+    }
+}
+
+@media (max-width: 500px) {
+    header > nav {
+        grid-template-columns: repeat(1fr, 4);
+    }
+    
+    header > nav > ul {
+        grid-column: 4;
+    }
+
+    main > div#logo > img {
+        width: 350px;
+    }
+
+    main > div > span > input,
+    main > div > span > input:focus,
+    main > div > span > textarea:focus {
+        width: 200px;
+    }
+}
+
+@media (max-width: 400px) {
+    main > div#logo > img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 350px) {
+    main > div#logo > img {
+        width: 250px;
+    }
+
+    main > div > span > input,
+    main > div > span > input:focus,
+    main > div > span > textarea:focus {
+        width: 150px;
+    }
+}
+
+@media (max-width: 300px) {
+    header > nav {
+        grid-template-columns: repeat(1fr, 1);
+    }
+    
+    header > nav > ul {
+        grid-column: 1;
+    }
+
+    main > div > span > input,
+    main > div > span > input:focus,
+    main > div > span > textarea:focus {
+        width: 100px;
+    }
+}
