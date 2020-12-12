@@ -1,10 +1,53 @@
-html {
+body > div#google-services-card {
+    display: none;
+    background-color: white;
+    position: fixed;
+    width: 300px;
+    right: 30px;
+    top: 75px;
+    padding: 10px;
+    box-shadow: 0px 2px 5px #20212423;
+    border-style: solid;
+    border-color: #bcbec783;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+body > div#google-services-card > ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 3;
+    align-items: baseline;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+body > div#google-services-card > ul > li {
+    width: 33%;
+    border-radius: 10px;
+}
+
+body > div#google-services-card > ul > li:hover {
+    background-color: rgba(166, 221, 247, 0.2);
+    width: 33%;
+}
+
+body > div#google-services-card > ul > li > p {
+    text-align: center;
+}
+
+body > div#google-services-card > ul > li > img {
     padding: 20px;
+    width: 100%;
 }
 
 header > nav {
     display: grid;
     grid-template-columns: repeat(1fr, 12);
+
+    margin-right: 20px;
+    margin-top: 20px;
 }
 
 header > nav > ul {
@@ -16,6 +59,7 @@ header > nav > ul {
 }
 
 header > nav > ul > li > a {
+    cursor: pointer;
     text-decoration: none;
     color: #202124;
 }
@@ -46,6 +90,10 @@ main > div#main-input-container > span {
     border-radius: 50px;
 }
 
+main > div#main-input-container > span:hover {
+    box-shadow: 0px 2px 5px #20212423;
+}
+
 main > div#main-input-container > span > img {
     padding: 1px;
     height: 25px;
@@ -60,6 +108,35 @@ main > div > span > textarea:focus {
     width: 500px;
     border-style: none;
     outline: none;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    background-color: #20212417;
+    position: absolute;
+    bottom: 0;
+    border-style: solid;
+    border-color: #bcbec7;
+    border-width: 1px;
+}
+
+footer > div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer > div > a {
+    margin-right: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: medium;
+    color: #53565f !important;
 }
 
 @media (max-width: 700px) {
@@ -93,6 +170,11 @@ main > div > span > textarea:focus {
     main > div > span > textarea:focus {
         width: 300px;
     }
+
+    footer > div > a {
+        margin-right: 30px;
+        font-size: small;
+    }
 }
 
 @media (max-width: 500px) {
@@ -112,6 +194,11 @@ main > div > span > textarea:focus {
     main > div > span > input:focus,
     main > div > span > textarea:focus {
         width: 200px;
+    }
+
+    footer > div > a {
+        margin-right: 30px;
+        font-size: smaller;
     }
 }
 
